@@ -14,3 +14,4 @@ names(df) <- featuresLabels[,2]
 nameVar <- names(df)
 newdf <- data.frame(Name = nameVar, Mean = apply(df, 2, mean), 
                     StdDev = apply(df, 2, sd))
+write.table(newdf, file = "file.out")
